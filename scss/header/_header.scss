@@ -1,0 +1,227 @@
+
+.header {
+
+   position: absolute;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   &__container {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__up {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #888888;
+   }
+
+   &__logo {
+      position: relative;
+      z-index: 5  ;
+      padding: 35px 0px;
+      flex: 0 1 180px;
+   }
+
+   &__link{
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+   }
+
+   &__email {
+      flex: 1 1 auto;
+   }
+
+   &__phone {
+      flex: 0 1 auto;
+      padding: 0px 0px 0px 43px;
+   }
+
+   &__down {
+      display: flex;
+      align-items: center;
+   }
+   &__call{
+      flex: 1 1 auto;
+      padding: 16px 0px;
+   }
+
+   &__menu {  
+   }
+
+   &__menu-button {
+   }
+}
+
+.block-link {
+   &__content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+   }
+   &__title {
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0px 0px 10px 0px;
+   }
+
+   &__link {
+      font-size: 20px;
+      font-weight: 600;
+      color: #607CE6;
+      &_underline {
+         text-decoration-line: underline;
+      }
+   }
+}
+
+.menu {
+
+   &__body {
+   }
+
+   &__list {
+      display: flex;
+   }
+   &__item {
+      margin: 0px 44px 0px 0px;
+   }
+
+   &__link {
+      font-weight: 400;
+      line-height: 1px; 
+      color: #333333;
+   }
+   &__link:hover{
+      text-decoration: underline;
+   }
+
+
+}
+
+.link-text {
+   display: flex;
+   justify-content: flex-end;
+   &__item {
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #607CE6;
+      font-size: 16px;
+      background: url(../img/phone-icon.svg)  no-repeat;
+      padding: 0px 0px 0px 18px;
+   }
+}
+
+.icon-menu {
+   display: none;
+   margin: 0px 0px 0px 15px;
+   &__open {
+   }
+   &__close {
+   }
+}
+
+// =============================================================
+
+@media (max-width:1179.98px) {
+   .menu__item{
+      margin: 0px 11px 0px 0px;
+   }  
+}
+
+@media (max-width: 991.98px) {
+   [class*="__container"]{
+      max-width: 750px;
+   }
+   .icon-menu{
+      display: flex;
+      position: relative;
+      z-index: 3;
+   }
+   .link-text__item {
+      white-space: nowrap;
+   }
+   .header__logo {
+      padding: 25px 0;
+   }
+   .block-link__title{
+      margin: 0px 0px 5px 0px;
+      font-size: 10px;
+      text-align: end;
+   }
+   .block-link__link{
+      font-size: 16px;
+   }
+   
+}
+
+@media (max-width: 767.98px) {
+   [class*="__container"]{
+      max-width: none;
+   }  
+   .header__phone{
+      padding: 0px 0px 0px 13px;
+   }
+}
+
+@media (max-width: 549.98px){
+   .header__logo{
+      flex: 0 0 40px;
+      overflow: hidden;
+   }
+}
+
+@media (max-width: 409.98px){
+   .header__link{
+      flex-direction: column;
+      align-items: flex-end;
+   }
+}
+
+// создание бургера  ===============
+
+@media (max-width: 991.98px){
+   .menu__body{
+      position: fixed;
+      top:0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      padding: 90px 15px 30px 15px;
+      transition: all 0.3s ease 0s;
+   }
+
+   .header:target .menu__body{
+      left: 0;
+   }
+   .menu__list{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   .menu__link{
+      font-size: 20px;
+   }
+
+   .menu__item{
+      margin: 0px 0px 25px 0px;
+   }
+   .menu__item:last-child{
+      margin-bottom: 0;
+   }
+   .icon-menu__close{
+      display: none;
+   }
+
+   .header:target .icon-menu__open{
+      display: none;
+   }
+   .header:target .icon-menu__close{
+      display: flex;
+   }
+}
+

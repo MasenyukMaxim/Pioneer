@@ -1,0 +1,75 @@
+.power-machines {
+   padding: 225px 0px 80px 0px;
+
+   &__container {
+   }
+
+   &__content {
+      display: flex;
+      align-items: center;
+   }
+
+   &__title {
+      flex: 0 1 580px;
+   }
+
+   &__text {
+      margin: 0px 0px 0px 20px;
+      flex: 0 1 379px;
+   }
+
+   &__image {
+      margin: 32px 0px 0px 0px;
+   }
+}
+.block-title {
+   &__title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 120%;
+      color: #333333;
+         &_size{
+            font-size: 60px;
+            font-weight: 700;
+         }
+   }
+}
+
+.text-block {
+   &__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+   }
+}
+.block-image {
+   
+}
+.block-image img {
+   max-width: 100%;
+}
+
+// ========================================
+
+@media (max-width: 767.98px) {
+   .power-machines__content{
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .power-machines__title {
+      flex: 0 1 auto;
+   }
+   .power-machines__text{
+      flex: 0 1 auto ;
+      margin: 31px 0px 0px 0px; 
+   }
+}
+
+@media (max-width: 344.98px){
+   .block-title__title_size {
+      font-size: 54px;
+   }
+   .block-title__title {
+      font-size: 44px;
+   }
+}
